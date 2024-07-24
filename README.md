@@ -6,7 +6,6 @@ This project uses YOLO (You Only Look Once) for real-time object detection from 
 ## Features
 
 - **YOLO Object Detection**: Detects and crops objects from video frames.
-- **Google Drive Upload**: Uploads cropped object images to Google Drive.
 
 ## Requirements
 
