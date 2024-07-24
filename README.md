@@ -1,5 +1,3 @@
-Here’s a sample `README.md` for your GitHub repository. This document explains how to use your YOLO-based object detection script, including downloading YOLO files and running the code.
-
 ```markdown
 # YOLO Object Detection and Google Drive Upload
 
