@@ -43,8 +43,6 @@ Due to size constraints, the YOLO weight files and configuration files are not i
    python main.py
    ```
 
-   Replace `your_script_name.py` with the name of your script file.
-
 3. **Check Output**: The cropped object images will be saved in the `output_objects` folder.
 
 
