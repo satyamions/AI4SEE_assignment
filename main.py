@@ -80,20 +80,6 @@ def process_video(video_path, output_folder, weights_path, cfg_path, names_path)
     cap.release()
     cv2.destroyAllWindows()
 
-# Upload to Google Drive
-def upload_to_drive(local_path, drive_folder_id):
-    gauth = GoogleAuth()
-    gauth.LocalWebserverAuth()
-    drive = GoogleDrive(gauth)
-    
-    for filename in os.listdir(local_path):
-        file_path = os.path.join(local_path, filename)
-        if os.path.isfile(file_path):
-            gfile = drive.CreateFile({'parents': [{'id': drive_folder_id}]})
-            gfile.SetContentFile(file_path)
-            gfile.Upload()
-            print(f"Uploaded {filename} to Google Drive")
-
 # Main execution
 if __name__ == "__main__":
     video_path = 'nature.mp4'
@@ -101,8 +87,4 @@ if __name__ == "__main__":
     weights_path = 'yolov3.weights'  
     cfg_path = 'yolov3.cfg'         
     names_path = 'coco.names'        
-    
     process_video(video_path, output_folder, weights_path, cfg_path, names_path)
-    
-    drive_folder_id = '1TCLXiLUmLvLVOb5GYE03-gcnqWw2P8OT' 
-    upload_to_drive(output_folder, drive_folder_id)
